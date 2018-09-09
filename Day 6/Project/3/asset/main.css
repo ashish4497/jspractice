@@ -1,0 +1,39 @@
+body{
+	margin: 0 auto;
+	background-image: url("/home/ravi/Downloads/cat4.jpg");
+	
+}
+.clock{
+	height: 350px;
+	width: 350px;
+	border-radius:50%;
+	border:20px solid white;
+	position: absolute;
+	margin-left: 25rem;
+	margin-top: 20px;
+
+}
+.second{
+	height:130px;
+	width:10px;
+	position: relative;
+	background-color: black;
+	top:50%;
+	left:50%;
+}
+.minutes{
+	height:130px;
+	width:10px;
+	background-color: black;
+	position: absolute;
+	top:50%;
+	left:50%;
+}
+.hour{
+	height:130px;
+	width:10px;
+	position: absolute;
+	background-color: black;
+	top:50%;
+	left:50%;
+}

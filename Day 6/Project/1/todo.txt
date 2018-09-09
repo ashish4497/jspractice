@@ -1,7 +1,35 @@
 Use index.html annd do the following:
-
 1. Add a script tag to the bottom.
+	var tag =document.createElement('script');
+	console.log(tag);
 2. Change the body style so it has a font-family of "Arial, sans-serif".
+ var elm =document.getElementsByTagName('body');
+ 	elm.stylefontFamily ="Arial, sans-serif"
+ 	console.log(elm);
+ 
 3. Replace each of the spans (nickname, favorites, hometown) with your own information.
+var elm =document.getElementById('nickname');
+	elm.innerText ="welcome"
+	console.log('elm')
+var elm =document.getElementById('favorites');
+	elm.innerText ="Hlow"
+	console.log('elm')
+var elm =document.getElementById('hometown');
+	elm.innerText ="Dharamshala"
+	console.log('elm')
+
 4. Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
-5. Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+var elm =document.getElementsByTagName('li');
+	elm[0];
+var elm =document.getElementsByTagName('li');
+	elm[1]
+	elm[1].style.color="red"
+var elm =document.getElementsByTagName('li');
+	elm[2]
+	elm[2].style.color="red"
+	
+
+5. Create a new img element and set its src attribute to a picture of you. Append that element to the page.le
+var elm = document.createElement('img');
+	 elm.src=""
+console.log(elm);
