@@ -11,7 +11,7 @@ body{
 	position: absolute;
 	margin-left: 25rem;
 	margin-top: 20px;
-
+	padding:15px;
 }
 .second{
 	height:130px;
@@ -36,4 +36,37 @@ body{
 	background-color: black;
 	top:50%;
 	left:50%;
+	
+}
+.number{
+	position:absolute;
+	top:0px;
+	left:50%;
+	font-size: 25px;
+	color: white;
+	padding-top: 10px;
+}
+.three{
+	position:absolute;
+	right:0px;
+	top:50%;
+	font-size: 25px;
+	color: white;
+	padding-right: 10px;
+}
+.six{
+	position:absolute;
+	bottom:0px;
+	left: 50%;
+	font-size:25px;
+	color: white;
+	padding-bottom: 10px;
+}
+.nine{
+	position:absolute;
+	left:0px;
+	top:50%;
+	font-size:25px;
+	color: white;
+	padding-left:10px;
 }
