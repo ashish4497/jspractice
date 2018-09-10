@@ -4,16 +4,39 @@
   <meta charset="UTF-8">
   <title>JS + CSS Clock</title>
   <link rel="stylesheet" type="text/css" href="asset/main.css">
+
 </head>
 <body>
-	<div class="clock">
-	<div class="second"></div>
-	<div class="minutes"></div>
-	<div class="hour"></div>
-	<span class="number">12</span>
-	<span class="three">3</span>
-	<span class="six">6</span>
-	<span class="nine">9</span>
+	<div class=" clock">
+		<div class="second second-hand"></div>
+		<div class="minutes"></div>
+		<div class="hour"></div>
+		<span class="twelve">12</span>
+		<span class="three">3</span> 
+		<span class="six">6</span>
+		<span class="nine">9</span>
 </div>
+ <script>
+	var secondtime =document.querySelector('.second-hand');
+	var minutestime =document.querySelector('.minutes');
+	var hourtime =document.querySelector('.hour');
+	console.log(secondtime,minutestime,hourtime)
+	function clock(){
+		var time = new Date();
+		var second = time.getSeconds();
+		var minutes = time.getMinutes();
+		var hour = time.getHours();	
+		console.log(second, minutes)
+	secondtime.style.transform =`rotate(${(second/60)*360+90}deg)`;
+	minutestime.style.transform =`rotate(${(minutes/60)*360+90}deg)`;
+	hourtime.style.transform = `rotate(${(hour/60)*360+90}deg)`;
+	}
+	clock()
+	setInterval(clock,100);
+	// var secondtime =document.querySelector('.second');
+	// function setDate();
+	// const seconds =now
+
+ </script>
 </body>
 </html>
