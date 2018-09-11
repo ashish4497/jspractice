@@ -23,12 +23,14 @@ body{
 	top:50%;
 	left:50%;
 	border-radius: 5px;
-	/*z-index: 1;*/
+	
 
 }
-.second-hand {
+.hand {
 	height: 10px;
 	background: yellow;
+	transform-origin: 50% ;
+
 }
 .minutes{
 	height:130px;

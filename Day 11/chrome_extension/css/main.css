@@ -1,0 +1,38 @@
+
+body{
+	margin: 0 auto;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+}
+.main{
+	display: grid;
+	grid-template-columns: 80% 20%;
+}
+.main-hero{
+}
+h2{
+	color: white;
+	position: absolute;
+}
+.hero{
+	margin: 20px 0;
+}
+.heading{
+	color:white;
+	font-size:20px;
+	font-family: sans-serif;
+	text-align: center;
+}
+#container{
+	display: block;
+	background-color: white;
+}
+#todo{
+	display:inline-block;
+	height: 2rem;
+	margin-top: 20px;
+}
+#btn{
+	display:inline-block;
+	margin-top: 20px;
+}
