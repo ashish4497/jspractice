@@ -8,24 +8,32 @@
 
 //2. Use console.log() to print the penguin's name to the console as part of a welcome message, like "Hello, I'm a penguin and my name is [NAME HERE]!"
 	console.log(`Hello Im a penguin and my name is ${myPenguin.characterName}`);
+
 //3. Write another line of code that adds a new property to your penguin called canFly and set it to false.
-		myPenguin.chrip = function(){
+		myPenguin.canFly ="false"
+			myPenguin.canFly
 
-			console.log("fly");
-		}
-}
 //4. Add a method to your penguin called chirp that prints to the console: "CHIRP CHIRP! Is this what penguins sound like?"
+	 myPenguin.sound ="CHIRP CHIRP"
+		console.log(myPenguin.sound);
 
 
-//5. Add another method to your penguin called sayHello that prints to the console the same message from problem 2 above. But this time, be sure to use the mystical, magical, all-powerful this keyword to access your penguin's name, so that way the sayHello method could potentially work for any penguin that has a name!
-
-
-//6. Next, call your penguin's sayHello() method and make sure that it works!
-
+//6. Next,call your penguin's sayHello() method and make sure that it works!
+		
 
 //7. Without modifying any of your previous code, change the penguin's name to "Penguin McPenguinFace" and then call your penguin's sayHello() function one more time to make sure it still works.
+var myPenguin = {
+		characterName:"Roy and Silo",
+		origin: "And Tango Makes Three",
+		author: "Peter Parnell and Justin Richardson"
+	}
+myPenguin.characterName ="Penguin McPenguinFace"
+console.log(myPenguin)
 
-//8. Write another method called fly, and inside that method, use an if / else statement to print "I can fly!" to the console if your penguin's canFly property is true, or "No flying for me!" if its canFly property is false.
+//8. Write another method called fly, and inside that method, use an if / 
+// else statement to print "I can fly!" to the console if your penguin's canFly property is true, 
+// or "No flying for me!" if its canFly property is false.
+
 
 //9. Call your penguin's fly() method and make sure it works!
 

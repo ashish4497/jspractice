@@ -26,15 +26,23 @@ var fred = {
     console.log("Hi there!");
   }
 };
-// 1.Create a new variable named penguins and set it equal to an array that lists these three penguins! (Hint: remember you can put variable names inside an array, not just hard-coded values! And remember that variable names don't have quotes around them.)
+// 1.Create a new variable named penguins and set it equal to an array that lists these 
+// three penguins! (Hint: remember you can put variable names inside an array, not just 
+// hard-coded values! And remember that variable names don't have quotes around them.)
+var penguins =["gunter","ramon","fred"]
 
 // 2. Access the first penguin in the list and print it to the console using console.log() -- notice that you can see all the properties and methods of that object listed in the console! (Hint: remember that array indexes start counting at 0, not 1!)
-
+ console.log(penguins[0]);
 // 3.Create a new variable called secondPenguin and set it equal to the second penguin in your penguins array.
-
+  var secondPenguin = penguins[1]
+  console.log(secondPenguin);
 // 4 Print to the console the name of the last penguin in the list.
+   var penguins =["gunter","ramon","fred"]
+    penguins[ penguins.length-1] 
 
-// 5. Remember the penguin you created earlier, with the variable name of myPenguin? Add that penguin to the end of the penguins array!
+// 5. Remember the penguin you created earlier, with the variable name of myPenguin? Add that penguin to 
+// the end of the penguins array!
+
 
 // 6. Print the length of the penguins array to the console.
 
