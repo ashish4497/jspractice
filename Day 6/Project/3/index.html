@@ -21,21 +21,19 @@
 	var minutestime =document.querySelector('.minutes');
 	var hourtime =document.querySelector('.hour');
 	console.log(secondtime,minutestime,hourtime)
-	// function clock(){
-	// 	var time = new Date();
-	// 	var second = time.getSeconds();
-	// 	var minutes = time.getMinutes();
-	// 	var hour = time.getHours();	
-	// 	console.log(second, minutes)
-	// secondtime.style.transform =`rotate(${(second/60)*360+9}deg)`;
-	// minutestime.style.transform =`rotate(${(minutes/60)*360+90}deg)`;
-	// hourtime.style.transform = `rotate(${(hour/60)*360+90}deg)`;
-	// }
-	// clock()
-	// setInterval(clock,100);
-	// var secondtime =document.querySelector('.second');
-	// function setDate();
-	// const seconds =now
+	function clock(){
+		var time = new Date();
+		var second = time.getSeconds();
+		var minutes = time.getMinutes();
+		var hour = time.getHours();	
+		// console.log(second, minutes)
+	secondtime.style.transform =`rotate(${(second/60)*360}deg)`;
+	minutestime.style.transform =`rotate(${(minutes/60)*360 +90}deg)`;
+	hourtime.style.transform = `rotate(${(hour/60)*360 -45}deg)`;
+	}
+	clock();
+	setInterval(clock,100);
+	
 
  </script>
 </body>
