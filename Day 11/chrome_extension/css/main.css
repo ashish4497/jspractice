@@ -1,23 +1,51 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 
+}	
 body{
 	margin: 0 auto;
 	background-image: url("../img/background.jpg");
 	background-size: cover;
+	box-sizing: border-box;
 }
 .main{
 	display: grid;
 	grid-template-columns: 80% 20%;
 }
-.main-hero{
+.main-hero {
+	position:relative;
 }
-h2{
+.watch { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.tagline{
+	font-size:2rem;
 	color: white;
 	position: absolute;
+	top: 70%;
+	left: 45%;
 }
-.hero{
+/*h2 {
+	color: white;*/
+}
+.hero {
 	margin: 20px 0;
 }
-.heading{
+.heading {
 	color:white;
 	font-size:20px;
 	font-family: sans-serif;
@@ -35,4 +63,12 @@ h2{
 .btn{
 	display:inline-block;
 	margin-top: 20px;
+}
+span{
+	font-size: 15px;
+	float: right;
+}
+.watch {
+	color:white;
+	font-size:5rem;
 }
