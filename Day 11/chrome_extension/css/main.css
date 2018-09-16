@@ -11,64 +11,65 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-
 }	
-body{
+body {
 	margin: 0 auto;
 	background-image: url("../img/background.jpg");
 	background-size: cover;
 	box-sizing: border-box;
 }
-.main{
-	display: grid;
-	grid-template-columns: 80% 20%;
-}
-.main-hero {
-	position:relative;
-}
-.watch { 
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
+
 .tagline{
 	font-size:2rem;
 	color: white;
-	position: absolute;
-	top: 70%;
-	left: 45%;
+	text-align: center;
 }
+ul li {
+	list-style-type: none;
+	border-bottom: 1px solid black;
+}
+.displayQuets {
+	font-size:2rem;
+	color: white;
+	text-align: center;
+	margin-top: 15px;
+	}
 /*h2 {
 	color: white;*/
+
+ul {
+	padding-left: 0;
 }
-.hero {
-	margin: 20px 0;
-}
+
 .heading {
-	color:white;
+	color: white;
 	font-size:20px;
 	font-family: sans-serif;
-	text-align: center;
 }
 .container {
 	display: block;
-	background-color: white;
-}
-.addtodo{
-	display:inline-block;
+	background-color:white;
 	
-	margin-top: 20px;
 }
-.btn{
-	display:inline-block;
-	margin-top: 20px;
-}
-span{
+
+span {
 	font-size: 15px;
 	float: right;
+	margin-right: 10px;
 }
 .watch {
 	color:white;
 	font-size:5rem;
+	text-align: center;
+}
+.main-hero {
+	position:absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50% , -50%);
+}
+.hero {
+	position: absolute;
+	top:30px;
+	right:30px;
 }
