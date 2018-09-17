@@ -32,7 +32,7 @@ function displayTodo(){
 function deleteTodo(e){
 	if(e.target.className !== "deleteBtn") return;
 	var remove = e.target.dataset.id;
-	todoData.splice(remove,2);
+	todoData.splice(remove,1);
 	displayTodo();
 	localStorage.setItem('datainfo',JSON.stringify(todoData));
 }
