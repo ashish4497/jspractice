@@ -1,19 +1,19 @@
-console.log(this.document === document); // Output
+console.log(this.document === document); // Output false
 
-console.log(this === window); //Output
+console.log(this === window); //Output true
 
 
 var myFunction = function () {
   console.log(this);
 };
-myFunction(); // Output
+myFunction(); // Output window
 
 
 function f1() {
   'use strict';
   return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); //Output false
 
 
 
@@ -68,9 +68,9 @@ function Person(fn, ln) {
 }
 
 let person = new Person("John", "Reed");
-person.displayName();  // Output
+person.displayName();  // Output John Reed
 let person2 = new Person("Paul", "Adams");
-person2.displayName();  // Output
+person2.displayName();  // Output Paul Admas
 
 
 
@@ -89,9 +89,9 @@ let user = {
 	}
 }
 
-user.foo()  // Output
+user.foo()  //  undefine
 let fun1 = user.foo1;
-fun1() // Output ??
+fun1() // Output ?? true
 user.foo1()  // Output ??
 
 
@@ -104,13 +104,13 @@ var module = {
   getX: function() { return this.x; }
 };
 
-module.getX(); // Output ??
+module.getX(); // Output ?? 81
 
 var retrieveX = module.getX;
 retrieveX(); //Output ??
 
 var boundGetX = retrieveX.bind(module);
-boundGetX(); // Output ??
+boundGetX(); // Output ?? 81
 
 
 // Call with new constructor
@@ -126,8 +126,8 @@ function Person(fn, ln) {
 }
 
 let person = new Person("John", "Reed");
-person.displayName(); // Output
+person.displayName(); // Output john reed
 let person2 = new Person("Paul", "Adams");
-person2.displayName(); // Output
+person2.displayName(); // Output paul Adams
 
-person.displayName.call(person2); // Output ??
+person.displayName.call(person2); // Output ?? paul Adams
