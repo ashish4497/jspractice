@@ -1,0 +1,18 @@
+function Rectangle (length,width){
+	this.length=length;
+	this.width=width;
+}
+Rectangle.prototype.area = function(){
+	return this.length *this.width
+}
+var rect1 = new Rectangle(3,3);
+console.log(rect1.area());
+var rect2 = new Rectangle (8,8);
+console.log(rect2.area());
+var Sqr = function square(s) {
+  this.length = this.width =s
+}
+Sqr.prototype = Object.create(Rectangle.prototype)
+var sqr = new Sqr(4);
+
+var sqr = new Sqr(5);

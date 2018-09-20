@@ -1,4 +1,4 @@
-console.log(this.document === document); // Output false
+console.log(this.document === document); // Output true
 
 console.log(this === window); //Output true
 
