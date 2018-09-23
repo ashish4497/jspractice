@@ -1,0 +1,14 @@
+/*body {
+	background-color:red;
+}*/
+.container{
+	height: 4SS00px;
+	width: 40%;
+	margin: 0 auto;
+}
+.cell {
+	background: red;
+	width:25px;
+	height: 20px;
+	border: 1px;
+}
