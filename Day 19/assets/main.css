@@ -2,6 +2,7 @@
 	background: :rgb(52,166,251);
 	table-layout: fixed;
 	border-spacing: 0;
+	background-color:skyblue;
 }
 .background td{
 	padding: 0;
