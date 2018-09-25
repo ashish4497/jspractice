@@ -1,14 +1,31 @@
-/*body {
-	background-color:red;
-}*/
+body {
+margin: 0,auto;
+background-image: url(../assets/media/bg.jpg);
+}
+.icon{
+	position: absolute;
+    left: 47%;
+    top: 0px;
+    height: 90px;
+    width: 93px;
+}
+.play{
+	position:relative;
+	left:73%;
+	height:50px;
+	width: 60px;
+
+}
 .container{
-	height: 4SS00px;
-	width: 40%;
-	margin: 0 auto;
+	width:55%;
+	margin:0 auto;
+	margin-top:35px
 }
 .cell {
-	background: red;
-	width:25px;
-	height: 20px;
-	border: 1px;
+	background-color: #dcedc8;
+	width:22px;
+	height: 22px;
+	margin: 2px;
+	border: 1.2px solid #ffffff;
+	display: inline-block;
 }
