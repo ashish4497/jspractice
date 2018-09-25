@@ -61,7 +61,7 @@ class Player {
 			new Vec(0, 0));
 	}
 }
-player.prototype.size = new Vec(0.8,1.5);
+Player.prototype.size = new Vec(0.8,1.5);
 class Lava {
 	constructor(pos, speed, reset){
 		this.pos = pos;
@@ -74,8 +74,25 @@ class Lava {
 			return new Lava(pos, new Vec(2, 0));
 		}
 		else if (ch == "|") {
-			return new Lava 
+			return new Lava (pos, new Vec(0, 2));
+		}
+		else if (ch == "v"){
+			return new Lava(pos, new Vec(0, 3));
 		}
 	}
 }
+Lava.prototype.size =new Vec(1,1);
+class Coin {
+	constructor(pos, basePos, wobble){
+		this.pos = pos;
+		this.basePos = basePos;
+		this.wobble =wobble;
+	}
+	get type() {return "coin";}
+	static create(pos){
+		let basePos = pos.plus(new Vec(0.2, 0.1));
+		return new Coin(basePos, basePos, Math.random() * Math.PI * 2);
+	}
+}
+coin.prototype.size =new Vec(0.6, 0.6);
 
