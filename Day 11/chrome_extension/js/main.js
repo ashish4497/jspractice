@@ -5,7 +5,7 @@ var selectToggle =document.querySelector('.container input')
 var timeHour =document.querySelector('.watch');
 var tag =document.querySelector('.tagline');
 var quetsSelect =document.querySelector('.displayQuets');
-
+var background_image = document.querySelector('.main')
 //function to add new data to array
 function addTodo(){
 	var value =addItem.value;
@@ -64,6 +64,14 @@ if(hour >= 0 && hour <= 12) {
 		tag.innerHTML = `Good Night`;
 	}
 }
+// functioan to change the background image
+  function background(){
+    var url =`https://api.unsplash.com/photos/random/?client_id=0a45993f6305ce341e86e2e723045840d7979e4c0281544f243d916b2b00dbe3`;
+    fetch(url).then(response =>response.json()).then(data => {
+      background_image.style.backgroundImage = `url(${data.urls.regular})`
+    })
+  }
+background();
 setInterval(setTime, 1000);
 displayTodo();
 var button =document.getElementById('btn');

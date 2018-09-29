@@ -1,0 +1,53 @@
+body {
+	background:#438643;
+	margin: 0 auto;
+	padding: 0;
+}
+.main {
+	width: 50%;
+	margin: 60px auto;
+	background-color:#96b25f;
+	border-radius: 30px;
+	padding: 10px 0;
+}
+.heading {
+	text-align: center;
+	padding: 15px;
+	color: papayawhip;
+	font-family:serif;
+}
+.usr-name {
+	text-align: center;
+}
+.field {
+	text-align: center;
+}
+.user-detail{
+	text-align: center;
+}
+.btn {
+	border-radius: 5px;
+}
+h5 {
+	font-size: 18px;
+	letter-spacing:1px;
+	font-size: 22px;
+    letter-spacing: 1;
+    color: forestgreen;
+}
+h4 {
+	font-size: 27px;
+    color: darkgreen;
+}
+.user-img {
+	border-radius:50%;
+	height: 12rem;
+	width: 12rem;
+	display: inline-block;
+}
+
+.user-repo,
+.user-follower,
+.user-following {
+	display:block;
+} 

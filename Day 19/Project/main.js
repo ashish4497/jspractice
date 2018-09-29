@@ -8,6 +8,8 @@ let Plan = `
 ......#++++++++++++#..
 ......##############..
 ......................`;
+
+
 class Level {
   constructor(plan) {
     let rows = plan.trim().split("\n").map(l => [...l]);
@@ -26,6 +28,7 @@ class Level {
     });
   }
 }
+
 class State {
 	constructor(level,actors,status){
 		this.level = level;
@@ -39,6 +42,8 @@ class State {
 		return this.actors.find(a => a.type == "player");
 	}
 }
+
+
 class Vec {
 	constructor(x,y){
 		this.x =x; this.y =y;
@@ -50,6 +55,8 @@ class Vec {
 		return new Vec(this.x * factor, this.y *factor);
 	}
 }
+
+
 class Player {
 	constructor(pos, speed) {
 		this.pos = pos;
@@ -61,6 +68,8 @@ class Player {
 			new Vec(0, 0));
 	}
 }
+
+
 Player.prototype.size = new Vec(0.8,1.5);
 class Lava {
 	constructor(pos, speed, reset){
@@ -81,6 +90,8 @@ class Lava {
 		}
 	}
 }
+
+
 Lava.prototype.size =new Vec(1,1);
 class Coin {
 	constructor(pos, basePos, wobble){
@@ -94,12 +105,15 @@ class Coin {
 		return new Coin(basePos, basePos, Math.random() * Math.PI * 2);
 	}
 }
+
+
 Coin.prototype.size =new Vec(0.6, 0.6);
 const levelChars = {
   ".": "empty", "#": "wall", "+": "lava",
   "@": Player, "o": Coin,
   "=": Lava, "|": Lava, "v": Lava
 };
+
 function elt(name, attrs, ...children) {
   let dom = document.createElement(name);
   for (let attr of Object.keys(attrs)) {
@@ -110,6 +124,8 @@ function elt(name, attrs, ...children) {
   }
   return dom;
 }
+
+
 class DOMDisplay {
   constructor(parent, level) {
     this.dom = elt("div", {class: "game"}, drawGrid(level));
@@ -117,8 +133,10 @@ class DOMDisplay {
     parent.appendChild(this.dom);
   }
 
-  clear() { this.dom.remove(); }
+  clear() { this.dom.remove();}
 }
+
+
 const scale = 20;
 
 function drawGrid(level) {
@@ -130,6 +148,7 @@ function drawGrid(level) {
         ...row.map(type => elt("td", {class: type})))
   ));
 }
+
 function drawActors(actors) {
   return elt("div", {}, ...actors.map(actor => {
     let rect = elt("div", {class: `actor ${actor.type}`});
@@ -140,6 +159,7 @@ function drawActors(actors) {
     return rect;
   }));
 }
+
 DOMDisplay.prototype.syncState = function(state) {
   if (this.actorLayer) this.actorLayer.remove();
   this.actorLayer = drawActors(state.actors);
@@ -190,6 +210,9 @@ Level.prototype.touches = function(pos, size, type) {
   }
   return false;
 };
+
+
+
 State.prototype.update = function(time, keys) {
   let actors = this.actors
     .map(actor => actor.update(time, this, keys));
@@ -209,12 +232,15 @@ State.prototype.update = function(time, keys) {
   }
   return newState;
 };
+
+
 function overlap(actor1, actor2) {
   return actor1.pos.x + actor1.size.x > actor2.pos.x &&
          actor1.pos.x < actor2.pos.x + actor2.size.x &&
          actor1.pos.y + actor1.size.y > actor2.pos.y &&
          actor1.pos.y < actor2.pos.y + actor2.size.y;
 }
+
 Lava.prototype.collide = function(state) {
   return new State(state.level, state.actors, "lost");
 };
@@ -225,6 +251,7 @@ Coin.prototype.collide = function(state) {
   if (!filtered.some(a => a.type == "coin")) status = "won";
   return new State(state.level, filtered, status);
 };
+
 Lava.prototype.update = function(time, state) {
   let newPos = this.pos.plus(this.speed.times(time));
   if (!state.level.touches(newPos, this.size, "wall")) {
@@ -268,6 +295,7 @@ Player.prototype.update = function(time, state, keys) {
   }
   return new Player(pos, new Vec(xSpeed, ySpeed));
 };
+
 function trackKeys(keys) {
   let down = Object.create(null);
   function track(event) {
@@ -295,6 +323,7 @@ const arrowKeys =
   }
   requestAnimationFrame(frame);
 }
+
 function runLevel(level, Display) {
   let display = new Display(document.body, level);
   let state = State.start(level);
@@ -316,6 +345,8 @@ function runLevel(level, Display) {
     });
   });
 }
+
+
 async function runGame(plans, Display) {
   for (let level = 0; level < plans.length;) {
     let status = await runLevel(new Level(plans[level]),
@@ -334,7 +365,8 @@ for (let level = 0; level < plans.length;) {
     }
     // console.log("You've won!");
   }
-  runGame(GAME_LEVELS, DOMDisplay);
+
+runGame(GAME_LEVELS, DOMDisplay);
    function runLevel(level, Display) {
     let display = new Display(document.body, level);
     let state = State.start(level);
@@ -355,4 +387,4 @@ for (let level = 0; level < plans.length;) {
         }
       });
     });
-}
+}	
