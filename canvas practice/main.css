@@ -1,0 +1,15 @@
+* { padding: 0; margin: 0; }
+.parent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body{
+	background-color:green;
+}
+canvas {
+  background:red;
+  display: block;
+  margin: 0 auto;
+}
