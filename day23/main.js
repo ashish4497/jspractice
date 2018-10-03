@@ -1,6 +1,5 @@
 var button = document.querySelector(".btn");
 button.addEventListener("click",booksearch);
-var bookList;
 var findbook = document.querySelector(".search-box");
 var bookDetail = document.querySelector(".book_list");
 
@@ -14,17 +13,16 @@ function booksearch(){
 	});
 findbook.value ="";
 }
-
 function displayBooks() {
 	var newItems = bookList.items.map(book => {
 		return (
 			`<li><img src=${book.volumeInfo.imageLinks.smallThumbnail}" class="bookimage">
-			<div class="Title">Title - ${book.volumeInfo.title}</div>
-			<div class="Authors">Author - ${book.volumeInfo.authors}</div>
-			<div class="page">Page - ${book.volumeInfo.pageCount}</div>
+			<div class="title">Title - ${book.volumeInfo.title}</div>
+			<div class="authors">Author - ${book.volumeInfo.authors}</div>
+			<div class="page">Pages - ${book.volumeInfo.pageCount}</div>
 			</li>
 			`
 		);
 	});
-	bookDetail.innerHTML = newItems.join(" ");
+	bookDetail.innerHTML = newItems.join("");
 }

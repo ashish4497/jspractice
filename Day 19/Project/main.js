@@ -348,23 +348,20 @@ function runLevel(level, Display) {
 
 
 async function runGame(plans, Display) {
+  let lives =2;
+  
   for (let level = 0; level < plans.length;) {
+    
     let status = await runLevel(new Level(plans[level]),
-                                Display);
+                              Display);
+    if(await runLevel(new Level(plans[0]),
+                              Display))
     if (status == "won") level++;
+    if (status == "lost") lives--;
   }
   // console.log("You've won!");
 }
     // runGame(GAME_LEVELS, DOMDisplay);
-
-      async function runGame(plans, Display) {
-for (let level = 0; level < plans.length;) {
-      let status = await runLevel(new Level(plans[level]),
-                                  Display);
-      if (status == "won") level++;
-    }
-    // console.log("You've won!");
-  }
 
 runGame(GAME_LEVELS, DOMDisplay);
    function runLevel(level, Display) {
