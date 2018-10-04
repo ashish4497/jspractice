@@ -9,7 +9,7 @@ c.fillRect(400,100,100,100);
 c.fillStyle ="rgba(0 255, 0,0.5)";
 c.fillRect(300,300,100,100);
 console.log(canvas);
-// line
+line
 c.beginPath();
 c.moveTo(50, 300);
 c.lineTo(300, 100);
@@ -33,12 +33,12 @@ dx = 2;
 dy = 2;
 var radius = 30;
 function animate() {
- requestAnimationFrame(animate);
-	c.clearRect(0, 0,innerWidth,innerHeight);
-	c.beginPath();
-	c.arc(x, y,radius, 0, Math.PI * 2, false);
-	c.strokeStyle = "red";
-	c.stroke();
+    requestAnimationFrame(animate);
+ c.clearRect(0, 0,innerWidth,innerHeight);
+c.beginPath();
+c.arc(x, y,radius, 0, Math.PI * 2, false);
+c.strokeStyle = "red";
+c.stroke();
   if(x + radius > innerWidth || x- radius < 0) {
     dx = -dx
   }
@@ -48,4 +48,3 @@ function animate() {
   x += dx;
   y += dy;
 };
-animate();
