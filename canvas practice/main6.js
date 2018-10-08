@@ -57,8 +57,6 @@ function randomColor(colors) {
   } else {
    circle1.color = 'green';
   }
-  
- 
   circle1.update();
   circle2.update();
  }
