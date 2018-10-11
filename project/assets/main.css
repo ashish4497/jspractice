@@ -1,0 +1,108 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    margin: 0 auto;
+    background-color: #17394d;
+}
+.navigation {
+    background-color:rgba(0,0,0,.35);
+}
+ul li {
+    list-style-type: none;
+
+}
+ul  {
+    display: flex;
+    justify-content: space-between;
+    padding:30px;
+}
+.heading {
+    font-size: 2rem;
+    color: #513dc0;
+} 
+.board {
+    color:whitesmoke;
+    font-size: 1.5rem;
+}
+.addicon {
+    color: white;
+    font-size: 2rem;
+}
+.addicon:hover {
+    opacity:1;
+    color: #513dc0;
+}
+.addBoarddName{
+    color: aqua;
+    display: block;
+}
+.addBoarddName {
+    list-Style-type :none;
+    display:block;
+    padding:10px;
+    width:200px;
+    background: rgba(0,0,0,.15);
+    margin-top: 20px;
+    border: none;
+    text-align:center;
+  }
+.btn {
+    padding: 2px;
+    margin-top: 12px;
+    color:#17394d;
+    border:none;
+  }
+  .fal{
+      font-size: 10px;
+  }
+  /* //----boardlist-----// */
+  .enterListTitle {
+      color: aqua;
+      display : block;
+  }
+  .enterListTitle {
+      list-Style-type :none;
+      display:block;
+      padding:10px;
+      width:200px;
+      background: rgba(0,0,0,.15);
+      margin-top: 20px;
+      border: none;
+      text-align:center;
+    }
+  .deletebtn {
+      padding: 2px;
+      margin-top: 12px;
+      color:#17394d;
+      border:none;
+    }
+  .deleteicon{
+    color:black;
+    padding:30px
+  }

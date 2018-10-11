@@ -7,7 +7,7 @@ var tag =document.querySelector('.tagline');
 var quetsSelect =document.querySelector('.displayQuets');
 var background_image = document.querySelector('.main')
 //function to add new data to array
-function addTodo(){
+function addTodo() {
 	var value =addItem.value;
 	var todoObject ={name: value, done: false};
 	todoData.push(todoObject);
@@ -496,3 +496,8 @@ var quotes =[
 	}
 	quotesList ();
 	setInterval(quotesList ,30000);
+
+
+
+
+ 
