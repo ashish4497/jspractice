@@ -10,11 +10,16 @@ var boards =[];
     addBoard() {
         let id;
         if(boards.length == 0){
-            id = 0;
+          id = 0;
         }
-    else{}    
+    else{ id = Boards.length}  
+    var board = {
+        name: this.name,
+        id :id,
+        lists:[]
+    }  
     }
- }
+}
 
 
 
