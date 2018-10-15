@@ -1,0 +1,12 @@
+.column {
+  margin :0 auto;
+}
+ul li {
+  list-style-type :none;
+  width:5rem;
+  border:1px solid black;
+  margin:1rem;
+  text-align:center;
+  courser: move;
+  
+}
