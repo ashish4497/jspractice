@@ -1,12 +1,30 @@
+body {
+	background-color: grey
+}
+
 .column {
   margin :0 auto;
+  /*text-align: center;*/
+  width:15%;
 }
+
+.tag_line {
+	text-align: center;
+	text-transform: capitalize;
+	border-bottom: 2px solid black;
+}
+
 ul li {
   list-style-type :none;
-  width:5rem;
-  border:1px solid black;
+  width:10rem;
+ /* border:1px solid black;*/
   margin:1rem;
   text-align:center;
-  courser: move;
-  
+  cursor: move;
+  text-align: center;
+  background-color:blue;
+  font-size:1.3rem;
+  text-transform: capitalize;
+  color: white;
+  border-radius:20px;
 }
