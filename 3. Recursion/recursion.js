@@ -1,5 +1,8 @@
 //1. Write a function that loops through the numbers n down to 0.
- function count()
+	var i =5;
+		for(i=0; i<=5; i++){
+			console.log(i)
+		} 
 
 
 
@@ -13,8 +16,9 @@ count(5,10)
 
 //3. Write a function 'exponent' that takes two arguments base, and expo,
 //uses a while loop to return the exponenet value of the base.
-function factorial(a,b){
-	if(a==)
+var base =3;
+var expo =4;
+function factorial(base,expo) {
 }
 
 
