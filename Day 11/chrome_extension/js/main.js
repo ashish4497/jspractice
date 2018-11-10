@@ -18,10 +18,12 @@ function addTodo() {
 
 //function to daisplay the data
 function displayTodo(){
+  console.log("yes")
 	ulListItem.innerHTML = todoData.map((value, i) => {
 		return(
 			`<li><label class="container">
-			 <input type="checkbox" ${value.done ? "checked" : ""} data-id=${i} >${value.name} 
+       <input type="checkbox" ${value.done ? "checked" : ""} data-id=${i} />
+       <span>${value.name}</span> 
 			 <span class ="deleteBtn" data-id=${i}> X </span > 
 			</label></li>`
 		)
@@ -38,10 +40,11 @@ function deleteTodo(e){
 }
 //function to toggle items
 function toggle(e){
-	if(e.target.tagName!=="INPUT" && e.target.type!=="checkbox") return; 
+	if(e.target.type!=="checkbox") return; 
 	var id = e.target.dataset.id;
 	todoData[id].done = !todoData[id].done;
-	localStorage.setItem('datainfo',JSON.stringify(todoData));
+  localStorage.setItem('datainfo',JSON.stringify(todoData));
+  displayTodo();
 }
 //fumction to create a watch
 function setTime () {
