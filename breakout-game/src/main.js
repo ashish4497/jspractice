@@ -155,6 +155,6 @@ function draw() {
     y += dy;
     requestAnimationFrame(draw);
 }
-// setInterval(draw,15);
+// setInterval(draw,1);
 draw();
 
