@@ -176,26 +176,43 @@ require("../css/books.scss");
 
 var button = document.querySelector("#btn");
 var searchinput = document.querySelector(".find-book");
+var boolList = document.querySelector('.book-list');
 var booksdata;
 
 //function to dispaly book list
-function displaybook() {
-    var books = document.querySelector(".book-list");
-    books.innerHTML = "<li>\n    <h1>" + booksdata.volumeInfo.title + "</h1>\n    </li>";
+function displaybook(arr) {
+	var books = document.querySelector(".book-list");
+	books.innerHTML = "";
+	arr.forEach(function (element, i) {
+		books.innerHTML += "<li data-id=\"" + i + "\">\n\t\t<img src=\"" + element.volumeInfo.imageLinks.smallThumbnail + "\">\n\t\t  <P> TITLE:  " + element.volumeInfo.title + "</P>\n\t\t  <P> publisher:  " + element.volumeInfo.publisher + "</P>\n\t\t  <P> author:" + element.volumeInfo.authors + "</P>\n\t\t  <input type=\"button\" value=\"Remove Item\" class=\"remove-list\" data-id=\"" + i + "\" >\n\t\t  </li>";
+	});
 }
-displaybook();
+
+//fuvction to remove the list item
+function removeBook(e) {
+	e.preventDefault();
+	if (e.target.classList.contains('remove-list')) {
+		var id = e.target.dataset.id;
+		booksdata.items.splice(id, 1);
+		console.log(booksdata);
+		displaybook(booksdata.items);
+	}
+}
+
+boolList.addEventListener('click', removeBook);
 
 //function to searching books
 
 function searchbooks(e) {
-    e.preventDefault();
-    console.log(e);
-    fetch("https://www.googleapis.com/books/v1/volumes?q=search+terms" + searchinput.value).then(function (res) {
-        return res.json();
-    }).then(function (data) {
-        booksdata = data;
-        console.log(booksdata);
-    });
+	e.preventDefault();
+	console.log(e);
+	fetch("https://www.googleapis.com/books/v1/volumes?q=search+terms" + searchinput.value).then(function (res) {
+		return res.json();
+	}).then(function (data) {
+		booksdata = data;
+		console.log(booksdata);
+		displaybook(booksdata.items);
+	});
 }
 
 button.addEventListener('click', searchbooks);
@@ -228,7 +245,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '44871' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '44139' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
