@@ -129,13 +129,20 @@ table {
   border-spacing: 0;
 }
 
-$heading:#bbbbbb;
+$heading:#ac8d70;
 $text-color:white;
-$green: rgb(181, 247, 181);
+$green: darkslateblue;
 $bgcolor:red;
-$gray:rgb(0, 0, 0);
+$gray:#c3c5c1;
+
+body {
+  background-color: #ffffff;
+  margin: 0 auto;
+  
+}
 
 // <====header--seacation======>//
+
 header {
   background-color: $green;
   height: 3rem;
@@ -151,31 +158,37 @@ header {
 
 // ====button--seacation=====//
 .search-seactio {
-  text-align: center;
-  margin-top: 3rem;
+  text-align: right;
 
   .find-book {
-    height: 3rem;
-    width: 25rem;
-    border: none;
-    background-color: $green;
+    height: 3.2rem;
+    width: 15rem;
+    border: 1px solid blue;
     color: $gray;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    border-top-left-radius: 37px;
+    border-bottom-left-radius: 37px;
+    padding: 4px;
+    letter-spacing: 1px;
+    outline: none;
   }
-
 }
 
 button {
   outline: none;
-  height: 55px;
+  margin-left: -5px;
+  outline: none;
+  border: 1px solid blue;
+  height: 61px;
   text-align: center;
-  width: 9rem;
+  width: 7rem;
   border-radius: 40px;
   background: #fff;
-  border: 2px solid $green;
   color: $green;
   letter-spacing: 1px;
-  text-shadow: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  vertical-align: bottom;
 
   font: {
     size: 20px;
@@ -191,7 +204,7 @@ button {
   }
 
   &:active {
-    //letter-spacing: 2px;
+    letter-spacing: 2px;
     letter-spacing: 2px;
   }
 
@@ -206,23 +219,55 @@ button {
     list-style: none;
     font-size: 1.4rem;
     text-transform: capitalize;
-    padding: 10px;
-    // width: 25rem;
-    // text-align: center;
+    padding: 3rem;
+    position: relative;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   p {
-    padding: 10px 0;
-  }
-  .remove-list{
-    outline: none;
-    height:2rem;
+    // padding:8px 0;
+    text-transform: capitalize;
     text-align: center;
-    border-radius:30px;
-    background: $heading;
-    border: 2px solid $heading;
-    color:$gray;
-    letter-spacing: 1px;
-    // text-shadow: 0;
+    color: #5f5f5f;
+    font-size: 1.2rem;
+    white-space: normal;
+    font-weight: 400;
   }
+  span{
+    font-size: 20px;
+    color: #0069af;
+  }
+
+  .remove-list {
+    outline: none;
+    height: 2rem;
+    text-align: center;
+    border-radius: 30px;
+    background: #236599;
+    border: 2px solid #236599;
+    color: $gray;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 10px;
+    left: 35%;
+
+    &:hover {
+      background: blue;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+  }
+}
+
+.book-list {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+
+img {
+  height: 25rem;
+  widows: 20rem;
 }

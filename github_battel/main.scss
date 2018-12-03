@@ -53,23 +53,36 @@ Header{
     text-align: center;
     text-transform: uppercase;
     font-size:2rem;
-    padding: 2.8rem;
+    padding: 2.6rem;
 }
-
-
-.battel-section{
+.input-style {
+    height: 1.6rem;
+    width: 15rem;
+    border: 2px solid black;
+    background: #f8f0f0;
+    border: 2px solid darkred;
+}
+.btn-style{
+    height: 2.1rem;
+    width: 7rem;
+    font-size: 1.2rem;
+    background-color: black;
+    color:white;
+    border:2px solid black;
+    text-transform: capitalize;
+}
+.battel-section {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    padding: 5rem;
+    // padding: 5rem;
     text-align: center;
     h1{
-        text-transform: capitalize;
-        font-size:2rem;
+    text-transform: capitalize;
+    font-size:2rem;
+    margin: 2rem 0;
     } 
     button {
-      background-color: black;
-      color:white;
-      border:2px solid black;
+        width: 5rem;
     }  
 }
 .battel-btn{ 
@@ -79,9 +92,31 @@ Header{
     width:100px;
 #battleStart{
     display: none;
+
 }
 #winner{
     text-align: center;
     text-transform: capitalize;
 }
+}
+#winner{
+    h1{
+        text-align: center;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+}
+img{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+p{
+    font-size: 1.4rem;
+   
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+li {
+    list-style-type: none;
 }

@@ -3,7 +3,7 @@ import '../css/books.scss';
 
 var button = document.querySelector("#btn");
 var searchinput = document.querySelector(".find-book")
-const boolList = document.querySelector('.book-list');
+const bookList = document.querySelector('.book-list');
 var booksdata;
 
 //function to dispaly book list
@@ -13,16 +13,16 @@ function displaybook(arr) {
 	arr.forEach((element, i) => {
 		books.innerHTML += `<li data-id="${i}">
 		<img src="${element.volumeInfo.imageLinks.smallThumbnail}">
-		  <P> TITLE:  ${element.volumeInfo.title}</P>
-		  <P> publisher:  ${element.volumeInfo.publisher}</P>
-		  <P> author:${element.volumeInfo.authors}</P>
+		  <P> TITLE: <span> ${element.volumeInfo.title}</span></P>
+		  <P> publisher:<span> ${element.volumeInfo.publisher}<span> </P>
+		  <P> author:<span>${element.volumeInfo.authors}</span></P>
 		  <input type="button" value="Remove Item" class="remove-list" data-id="${i}" >
 		  </li>`
 	});
 }
 
 
-//fuvction to remove the list item
+//function to remove the list item
 function removeBook(e)  {
 	e.preventDefault();
 	if(e.target.classList.contains('remove-list')) {
@@ -33,8 +33,6 @@ function removeBook(e)  {
 	}
 }
 
-
-boolList.addEventListener('click', removeBook);
 
 
 //function to searching books
@@ -52,3 +50,4 @@ function searchbooks(e) {
 }
 
 button.addEventListener('click', searchbooks);
+bookList.addEventListener('click', removeBook);
