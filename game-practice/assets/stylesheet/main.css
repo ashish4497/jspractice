@@ -1,5 +1,5 @@
 .background {
-  background: #34a6fb;
+  background: #a8d7fc;
   table-layout: fixed;
   border-spacing: 0; }
 
@@ -29,8 +29,8 @@
 
 .game {
   overflow: hidden;
-  max-width: 600px;
-  max-height: 450px;
+  /* max-width: 600px; */
+  /* max-height: 450px; */
   position: relative; }
 
 /*# sourceMappingURL=main.css.map */
